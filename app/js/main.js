@@ -1,23 +1,38 @@
 $(function() {
-	var slides = document.getElementsByClassName('slider')[0];
-	var count = 0;
+	var slides = document.getElementsByClassName('slider')[0].children;
+	var count = 3;
 
-	$('.b_right').click(alert(moveRight()));
-	$('.b_left').click(alert(moveLeft()));
+	$('#arrowL').bind('click', function() {
+		var reduction = count;
+		return (function() {
+			count = --reduction;
+			alert(count);
+		})();
+	});
 
-	var moveRight = function() {
-		var addition = 0;
-		return function() {
-			return ++addition;
-		}
+	$('#arrowR').bind('click', function() {
+		var addition = count;
+		return (function() {
+			count = ++addition;
+			alert(count);
+		})();
+	});	
+
+	/*var moveRight = function Right() {
+		var addition = count;
+		return (function() {
+			count = ++addition
+			return count;
+		})();
 	};
 
-	var moveLeft = function() {
-		var reduction = 0;
-		return function() {
-			return --reduction;
-		}
-	};
+	var moveLeft = function Left() {
+		var reduction = count;
+		return (function() {
+			count = --reduction
+			return count;
+		})();
+	};*/
 
 });
 
