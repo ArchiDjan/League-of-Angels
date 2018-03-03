@@ -4,26 +4,22 @@ $(function() {
 	var count = 0;
 
 	$('#arrowL').bind('click', moveLeft);
+	var initialPos;
 
 	function moveLeft() {
-		var reduction = count;
-		return (function() {
-			count = (reduction <= 0) ? numSlides - moveRight() : --reduction;
-			/*$(slides[0]).hide();*/
-			/*alert(count);*/
-			return count;
-		})();
+		initialPos = $('.slider').css('right').replace('px', '')*1;
+		var newPos = (initialPos == 0) ? 0 : initialPos - 1920;
+		alert(newPos);
+		$('.slider').animate({left: newPos}, 500);
 	}
 
 	$('#arrowR').bind('click', moveRight);	
 
 	function moveRight() {
-		var addition = count;
-		return (function() {
-			count = (addition >= numSlides - 1) ? 1 - moveLeft() : ++addition;
-			alert(count);
-			return count;
-		})();
+		initialPos = $('.slider').css('right').replace('px', '')*1;
+		var newPos = (initialPos >= 1920*2) ? initialPos : initialPos + 1920;
+		alert(newPos);
+		$('.slider').animate({right: newPos}, 500);
 	}
 
 });
