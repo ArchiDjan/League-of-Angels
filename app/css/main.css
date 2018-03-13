@@ -45,6 +45,23 @@ table {
 /* SIZES */
 /* SOURCES */
 /* COLORS */
+/* Large screens ----------- */
+@media only screen and (max-width: 1600px) {
+  aside.left_block-1 {
+    left: 25%; }
+  img.head_block-11 {
+    width: 748px;
+    margin-left: -374px; }
+  article.isolda_des {
+    height: 204px;
+    line-height: 36px;
+    font-size: 24px; }
+  img.char-1 {
+    width: 400px;
+    margin-top: -48px; }
+  aside .imperium_immort {
+    margin-bottom: 10px; } }
+
 @font-face {
   font-family: 'Conv_Lora-Regular';
   src: url("../fonts/Lora-Regular.eot");
@@ -61,7 +78,8 @@ header, article, footer, .box-video {
   background-size: cover;
   position: relative; }
 
-.btn_scroll_down {
+.btn_scroll_down,
+.btn_scroll_rl {
   position: absolute;
   background: url("../img/6_BUTTONS/BTN_scroll_normal.png");
   width: 102px;
@@ -70,9 +88,11 @@ header, article, footer, .box-video {
   left: 50%;
   margin-left: -51px;
   cursor: pointer; }
-  .btn_scroll_down:hover {
+  .btn_scroll_down:hover,
+  .btn_scroll_rl:hover {
     background: url("../img/6_BUTTONS/BTN_scroll_hover.png"); }
-  .btn_scroll_down:active {
+  .btn_scroll_down:active,
+  .btn_scroll_rl:active {
     background: url("../img/6_BUTTONS/BTN_scroll_active.png"); }
 
 .b_left, .b_right {
@@ -142,7 +162,7 @@ header > p {
   height: 949px; }
 
 .block-1 section {
-  width: 1920px;
+  width: 100%;
   display: inline-block;
   color: #eeeeee;
   font-size: 28px;
@@ -180,7 +200,7 @@ header > p {
 .left_block-1 {
   width: 432px;
   position: absolute;
-  left: 20%;
+  left: 21%;
   top: 16%; }
 
 .isolda_des {
@@ -227,7 +247,7 @@ header > p {
   top: 50%;
   margin-top: -240px;
   width: 140px;
-  right: 16%; }
+  right: 10%; }
   .right_block-1 li {
     list-style-type: none;
     height: 140px;

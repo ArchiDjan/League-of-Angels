@@ -1,5 +1,6 @@
 @import "reset"
 @import "var"
+@import "media"
 @font-face 
 	font-family: 'Conv_Lora-Regular'
 	src: url('../fonts/Lora-Regular.eot')
@@ -16,7 +17,8 @@ header, article, footer, .box-video
 	background-size: cover
 	position: relative
 
-.btn_scroll_down
+.btn_scroll_down,
+.btn_scroll_rl
 	position: absolute
 	background: $btn_scroll_d
 	width: $w_btn_scr_d
@@ -101,7 +103,7 @@ header > p
 	height: $h_block_1
 
 .block-1 section
-	width: $w_main
+	width: 100%
 	display: inline-block
 	color: $c_text_chars
 	font-size: $fz_block-1
@@ -138,7 +140,7 @@ header > p
 .left_block-1
 	width: $w_aside_left
 	position: absolute
-	left: 20%
+	left: 21%
 	top: 16%
 
 .isolda_des
@@ -186,7 +188,7 @@ header > p
 	top: 50%
 	margin-top: -240px
 	width: 140px
-	right: 16%
+	right: 10%
 
 	& li
 		list-style-type: none

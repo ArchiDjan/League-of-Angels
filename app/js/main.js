@@ -8,6 +8,15 @@ $(function() {
 	maxNumIcon 										= btnChars.length - 1;
 
 
+	$('.btn_scroll_down').bind('click', scrollDown);
+
+	function scrollDown(event) {
+		/*var elem_scroll = $(this).closest('.top_height').css('height');*/
+
+		var scroll_el = $(this).attr('href');
+		/*top = $('#top').offset().top;*/ //получаем идентификатор блока к которому надо переместиься
+		$("html, body").animate({ scrollTop: $(scroll_el).offset().top }, 500);
+	} 
 
 	$('.toggleChar li:first').addClass('active');
 
@@ -16,14 +25,8 @@ $(function() {
 		btnChars[i].addEventListener('click', function() {
 			$('.toggleChar li').removeClass('active');
 			$(this).addClass("active");
-			toggleSlide();
 		});
 	}
-
-/*	function toggleSlide(event) {
-		var currentPos = event.currentTarget;
-		alert(currentPos);
-	}*/
 
 	// обработчик при нажатии на стрелку влево
 	$('#arrowL').bind({'click': moveLeft, 'mousedown': switchIconL});																			
