@@ -12,6 +12,9 @@ body
 	margin: 0px auto
 	height: 100vh
 	max-width: $w_main
+
+.hide_icon
+	display: none
 	
 header, article, footer, .box-video
 	background-size: cover
@@ -192,13 +195,13 @@ header > p
 
 	& li
 		list-style-type: none
-		height: 140px
+		height: 138px
 		margin-bottom: 40px
 		cursor: pointer
+		transition: .5s
 
 .isolda_icon
 	background-image: $bg_isolda_icon
-	transition: .5s
 
 	&:hover
 		background-image: $bg_isolda_icon_hover
@@ -208,7 +211,6 @@ li.isolda_icon.active
 
 .pamela_icon
 	background-image: $bg_pamela_icon
-	transition: 1s
 
 	&:hover
 		background-image: $bg_pamela_icon_hover
@@ -218,7 +220,6 @@ li.pamela_icon.active
 
 .Lleyn_icon
 	background-image: $bg_Lleyn_icon
-	transition: 1s
 
 	&:hover
 		background-image: $bg_Lleyn_icon_hover

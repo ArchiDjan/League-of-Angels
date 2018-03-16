@@ -11,22 +11,22 @@ $(function() {
 	$('.btn_scroll_down').bind('click', scrollDown);
 
 	function scrollDown(event) {
-		/*var elem_scroll = $(this).closest('.top_height').css('height');*/
-
-		var scroll_el = $(this).attr('href');
-		/*top = $('#top').offset().top;*/ //получаем идентификатор блока к которому надо переместиься
-		$("html, body").animate({ scrollTop: $(scroll_el).offset().top }, 500);
+		// получает расстояние от верха страницы до блока под стрелкой
+		var elem_scroll = $(this).closest('.top_height').next().offset().top;
+		// скролит страницу на полученное расстояние 
+		$("html, body").animate({ scrollTop: elem_scroll}, 500);
 	} 
 
+	// задает класс active иконки персонажа для стартового слайда 
 	$('.toggleChar li:first').addClass('active');
 
-	// обработчик при нажатии на иконку персонажа
+	/*// обработчик при нажатии на иконку персонажа
 	for (var i = 0; i < btnChars.length; i++) {
 		btnChars[i].addEventListener('click', function() {
 			$('.toggleChar li').removeClass('active');
 			$(this).addClass("active");
 		});
-	}
+	}*/
 
 	// обработчик при нажатии на стрелку влево
 	$('#arrowL').bind({'click': moveLeft, 'mousedown': switchIconL});																			

@@ -74,6 +74,9 @@ body {
   height: 100vh;
   max-width: 1920px; }
 
+.hide_icon {
+  display: none; }
+
 header, article, footer, .box-video {
   background-size: cover;
   position: relative; }
@@ -250,13 +253,13 @@ header > p {
   right: 10%; }
   .right_block-1 li {
     list-style-type: none;
-    height: 140px;
+    height: 138px;
     margin-bottom: 40px;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: .5s; }
 
 .isolda_icon {
-  background-image: url(../img/2_CHARS/2_CHARS_icon_Isolda_inactive.png);
-  transition: .5s; }
+  background-image: url(../img/2_CHARS/2_CHARS_icon_Isolda_inactive.png); }
   .isolda_icon:hover {
     background-image: url(../img/2_CHARS/2_CHARS_icon_Isolda_hover.png); }
 
@@ -264,8 +267,7 @@ li.isolda_icon.active {
   background-image: url("../img/2_CHARS/2_CHARS_icon_Isolda_active.png"); }
 
 .pamela_icon {
-  background-image: url(../img/2_CHARS/2_CHARS_icon_Pamela_inactive.png);
-  transition: 1s; }
+  background-image: url(../img/2_CHARS/2_CHARS_icon_Pamela_inactive.png); }
   .pamela_icon:hover {
     background-image: url(../img/2_CHARS/2_CHARS_icon_Pamela_hover.png); }
 
@@ -273,8 +275,7 @@ li.pamela_icon.active {
   background-image: url("../img/2_CHARS/2_CHARS_icon_Pamela_active.png"); }
 
 .Lleyn_icon {
-  background-image: url(../img/2_CHARS/2_CHARS_icon_Lleyn_inactive.png);
-  transition: 1s; }
+  background-image: url(../img/2_CHARS/2_CHARS_icon_Lleyn_inactive.png); }
   .Lleyn_icon:hover {
     background-image: url(../img/2_CHARS/2_CHARS_icon_Lleyn_hover.png); }
 
