@@ -1,16 +1,27 @@
 @import "reset"
 @import "var"
+@import "media"
+@font-face 
+	font-family: 'Conv_Lora-Regular'
+	src: url('../fonts/Lora-Regular.eot')
+	src: local('☺'), url('../fonts/Lora-Regular.woff') format('woff'), url('../fonts/Lora-Regular.ttf') format('truetype'), url('../fonts/Lora-Regular.svg') format('svg')
+	font-weight: normal
+	font-style: normal
 
 body
 	margin: 0px auto
 	height: 100vh
-	max-width: 1920px
+	max-width: $w_main
+
+.hide_icon
+	display: none
 	
 header, article, footer, .box-video
 	background-size: cover
 	position: relative
 
-.btn_scroll_down
+.btn_scroll_down,
+.btn_scroll_rl
 	position: absolute
 	background: $btn_scroll_d
 	width: $w_btn_scr_d
@@ -18,6 +29,7 @@ header, article, footer, .box-video
 	bottom: 1%
 	left: 50%
 	margin-left: $btn_scr_d_left
+	cursor: pointer
 
 	&:hover
 		background: $btn_scroll_dHover
@@ -28,6 +40,7 @@ header, article, footer, .box-video
 .b_left, .b_right
 	top: 50%
 	margin-top: $btn_scr_d_top
+	cursor: pointer
 
 .b_left
 	transform: rotate(90deg)
@@ -59,6 +72,7 @@ header
 	left: 50%
 	margin-left: $btn_play_left
 	background: $btn_play
+	cursor: pointer
 
 	&:hover
 		background: $btn_playHover
@@ -67,13 +81,104 @@ header
 		background: $btn_playActive
 
 header > .btn_play
-	bottom: 10%
+	bottom: 23%
+	
+header > p
+	color: $c_text_chars
+	text-align: center
+	font-size: $fz_block-1
+	line-height: 36px
+	position: absolute
+	left: 50%
+	width: $w_header_p
+	margin-left: $header_p_left
+	bottom: 11%
+
+.block-1
+	overflow: hidden
+	white-space: nowrap
+	box-sizing: border-box
+	color: $c_text_chars
+	font-size: 0        // для удаления отступов между инлайновыми блоками
+	height: $h_block_1
+
+.block-1 section, article
+	height: $h_block_1
 
 .block-1 section
-	height: $h_block_1
+	width: 100%
+	display: inline-block
+	color: $c_text_chars
+	font-size: $fz_block-1
+	position: relative
 
 .block-11
 	background: $bg_block_11
+
+.char-1
+	margin-left: -46px
+	margin-top: -72px
+	margin-bottom: -36px
+
+.imperium_immort,
+.Union-lights,
+.celestials
+	height: 40px
+	margin-bottom: 20px
+	line-height: 34px
+	color: $c_imperium_immort
+	text-shadow: 0px 5px 30px rgba(35, 27, 32, 0.004)
+
+	& > img
+		display: block
+		float: left
+		margin-right: 18px
+
+.Union-lights
+	color: $c_Union-lights
+
+.celestials
+	color: $c_celestials
+
+.left_block-1
+	width: $w_aside_left
+	position: absolute
+	left: 21%
+	top: 16%
+
+.isolda_des
+	height: 210px
+	line-height: $lh_block-1
+	font-size: $fz_block-1
+
+.line_1,
+.line_2 
+	height: 78px
+
+.line_1 > img,
+.line_2 > img
+	margin-right: 24px
+
+.line_1 > img, .line_1 > p,
+.line_2 > img, .line_2 > p
+	float: left
+	line-height: 26px
+
+.line_1 > p:last-child,
+.line_2 > p:last-child
+	font-size: 18px
+	color: $c_gray
+
+.line_2
+	clear: both
+
+.head_block-11
+	position: absolute
+	top: 2%
+	left: 50%
+	width: 
+	margin-left: $head_block-11_left
+	z-index: 1
 
 .block-12
 	background: $bg_block_12
@@ -81,8 +186,55 @@ header > .btn_play
 .block-13
 	background: $bg_block_13
 
-.block-12, .block-13
-	display: none
+.right_block-1
+	position: absolute
+	top: 50%
+	margin-top: -240px
+	width: 140px
+	right: 10%
+
+	& li
+		list-style-type: none
+		height: 138px
+		margin-bottom: 40px
+		cursor: pointer
+		transition: .5s
+
+.isolda_icon
+	background-image: $bg_isolda_icon
+
+	&:hover
+		background-image: $bg_isolda_icon_hover
+
+li.isolda_icon.active
+	background-image: $bg_isolda_icon_active
+
+.pamela_icon
+	background-image: $bg_pamela_icon
+
+	&:hover
+		background-image: $bg_pamela_icon_hover
+
+li.pamela_icon.active
+	background-image: $bg_pamela_icon_active
+
+.Lleyn_icon
+	background-image: $bg_Lleyn_icon
+
+	&:hover
+		background-image: $bg_Lleyn_icon_hover
+
+li.Lleyn_icon.active
+	background-image: $bg_Lleyn_icon_active
+
+.footer_block-1
+	position: absolute
+	bottom: 12%
+	left: 50%
+	margin-left: -558px
+	width: 1126px
+	text-align: center
+	line-height: $lh_block-1
 
 .box-video
 	overflow: hidden
@@ -95,6 +247,48 @@ header > .btn_play
 .block-3
 	height: $h_block_3
 	background: $bg_block_3
+	color: $c_text_chars
+	font-size: $fz_block-1
+	text-align: center
+
+	& > .footer_block-3
+		position: absolute
+		width: $w_footer_block-3
+		left: 50%
+		margin-left: $footer_block-3_left
+		word-wrap: break-word 
+		line-height: $lh_block-1
+		bottom: 10%
+
+.fight_rating_1,
+.fight_rating_2
+	position: absolute
+	bottom: 28%
+
+	& p
+		margin-top: -40px
+		color: $c_celestials
+
+.fight_rating_1
+	left: 50%
+	width: $w_fight_rating_1
+	margin-left: $fight_rating_1_left
+
+.fight_rating_2
+	left: 50%
+	width: $w_fight_rating_2
+	margin-left: $fight_rating_2_left
+
+.head_block-3
+	position: absolute
+	top: 5%
+	left: 50%
+	width: $w_head_block-3
+	margin-left: $head_block-3_left
+
+.footer_block-3
+	position: absolute
+	width: 80%
 
 footer
 	height: $h_footer
@@ -102,6 +296,86 @@ footer
 
 	& > .btn_play
 		top: 20%
+		cursor: pointer
+
+	& > .share_page
+		color: $c_text_chars
+		text-align: center
+		font-size: $fz_block-1
+		line-height: 36px
+		position: absolute
+		left: 50%
+		width: 472px
+		margin-left: -236px
+		height: 36px
+		top: 50%
+		margin-top: -18px
+
+	& .social_line
+		width: 460px
+		margin-left: -188px
+		bottom: 34%
+		position: absolute
+		left: 50%
+
+	& .social_line li
+		list-style-type: none
+		display: inline-block
+		width: 83px
+		height: 91px
+		margin-right: 15px
+		cursor: pointer
+
+		&.fb
+			background: $bg_fb
+
+			&:hover
+				background: $bg_fb_hov
+			&:active
+				background: $bg_fb_act
+
+		&.vk
+			background: $bg_vk
+
+			&:hover
+				background: $bg_vk_hov
+			&:active
+				background: $bg_vk_act
+
+		&.ok
+			background: $bg_ok
+
+			&:hover
+				background: $bg_ok_hov
+			&:active
+				background: $bg_vk_act
+
+		&.mail
+			background: $bg_mail
+
+			&:hover
+				background: $bg_mail_hov
+			&:active
+				background: $bg_mail_act
+
+.copyright
+	color: $c_gray
+	text-align: center
+	font-size: $fz_block-1
+	line-height: 36px
+	position: absolute
+	left: 50%
+	width: 856px
+	margin-left: -420px
+	bottom: 20%
+
+.logo_footer
+	width: 150px
+	height: 60px
+	position: absolute
+	left: 50%
+	margin-left: -60px
+	bottom: 10%
 
 .devis
 	background: $devis
@@ -113,19 +387,3 @@ footer
 	top: 4%
 
 
-
-/* .grid
-	display: grid
-	grid-template-columns: 1fr 1fr 1fr
-	grid-auto-rows: $h_cell
-	grid-gap: $gr_gap
-
-	& div
-		background-color: $bgc_cell
-		border: 1px solid $bor_col
-		border-radius: 5px
-		font-size: 26px
-		color: white
-		cursor: pointer
-		line-height: $h_cell
-		text-align: center */

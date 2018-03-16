@@ -1,48 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<link rel="icon" type="image/x-icon" href="img/2_CHARS/2_CHARS_fraction_Isolda.png">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<title>Лига Ангелов</title>
 </head>
 <body>
 	
-	<header>
+	<header class="top_height">
 		<img class="logo" src="img/1_HEADER/1_HEADER_logo.png"></img>
 		<img class="slogan" src="img/1_HEADER/1_HEADER_head.png"></img>
 		<div class="btn_play"></div>
-		<div class="btn_scroll_down"></div>
+		<p style="font-family: 'Conv_Lora-Regular' ">
+			Судьба планеты ангелов в твоих руках! Древнее зло вырвалось из глубины </br>
+			преисподней, и лишь вмешательство героя спасет этот мир! </br>
+			Все зависит только от твоих решений!
+		</p>
+		<div class="btn_scroll_down" href="block-1"></div>
 	</header>
 
-	<article class="block-1">
-		<div class="slider">
-			<section class="block-11"></section>
-			<section class="block-12"></section>
-			<section class="block-13"></section>
-		</div>
+	<article class="block-1 top_height" id='block-1'>
+		<img class="head_block-11" src="img/2_CHARS/2_CHARS_head.png"></img>
+		<article class="slider">
+
+			<section class="block-11">
+				<aside class="left_block-1">
+					<img class="char-1" src="img/2_CHARS/2_CHARS_name_Isolda.png"></img>
+					<div class="imperium_immort">
+						<img src="img/2_CHARS/2_CHARS_fraction_Isolda.png">
+						<p>Империя бессмертных</p>
+					</div>
+					<article class="isolda_des">
+						Появление королевы холода и ее </br> верного медведя предвещает </br> ледяная буря.
+						Неуязвимая Изольда </br>
+						замораживает противников </br> насмерть и не знает пощады.
+					</article>
+					<div class="line_1">
+						<img src="img/2_CHARS/2_CHARS_skill_Isolda_1.png">
+						<p class="name_skill">Конец зимы</p>
+						<p class="descrip_skill">360% урона авангарду врага</p>
+					</div>
+					<div class="line_2">
+						<img src="img/2_CHARS/2_CHARS_skill_Isolda_2.png">
+						<p class="name_skill">Морозная ария</p>
+						<p class="descrip_skill">Ледяной щит уменьшает получаемый </br> урон на 20%</p>
+					</div>
+				</aside>
+			</section>
+
+			<section class="block-12">
+				<aside class="left_block-1">
+					<img class="char-1" src="img/2_CHARS/2_CHARS_name_Pamela.png"></img>
+					<div class="Union-lights">
+						<img src="img/2_CHARS/2_CHARS_fraction_Pamela.png">
+						<p>Союз просвященных</p>
+					</div>
+					<article class="isolda_des">
+						Памела — супруга древнего </br> огненного дракона, одна из первых </br>
+						овладела магией. Никто не знает, </br> на чьей стороне она сражается </br> на самом деле.
+					</article>
+					<div class="line_1">
+						<img src="img/2_CHARS/2_CHARS_skill_Pamela_1.png">
+						<p class="name_skill">Черное дыхание</p>
+						<p class="descrip_skill">Наносит врагу с мин. ОЗ 420% урона</p>
+					</div>
+					<div class="line_2">
+						<img src="img/2_CHARS/2_CHARS_skill_Pamela_2.png">
+						<p class="name_skill">Проклятие дракона</p>
+						<p class="descrip_skill">Проклинает всех врагов, снижая урон на 15%</p>
+					</div>
+				</aside>
+			</section>
+
+			<section class="block-13">
+				<aside class="left_block-1">
+					<img class="char-1" src="img/2_CHARS/2_CHARS_name_Lleyn.png"></img>
+					<div class="celestials">
+						<img src="img/2_CHARS/2_CHARS_fraction_Lleyn.png">
+						<p>Цитадель небожителей</p>
+					</div>
+					<article class="isolda_des">
+						Зверолюд Ллейн выбрал кровавый </br> путь наемного убийцы в тайной </br>
+						организации "Покров". Его прозвали </br> “Дикий клинок” из-за жестокости и </br> скорости.
+					</article>
+					<div class="line_1">
+						<img src="img/2_CHARS/2_CHARS_skill_Lleyn_1.png">
+						<p class="name_skill">Дикий разрез</p>
+						<p class="descrip_skill">Превращает 30% наносимого урона в ОЗ.</p>
+					</div>
+					<div class="line_2">
+						<img src="img/2_CHARS/2_CHARS_skill_Lleyn_2.png">
+						<p class="name_skill">Найти и уничтожить</p>
+						<p class="descrip_skill">Наносит 313% урона врагу.</p>
+					</div>
+				</aside>
+			</section>
+		</article>
 		
-		<div class="btn_scroll_down"></div>
-		<div class="btn_scroll_down b_left"></div>
-		<div class="btn_scroll_down b_right"></div>
+		<nav class="right_block-1">
+			<ul class="toggleChar">
+				<li class="isolda_icon"></li>
+				<li class="pamela_icon"></li>
+				<li class="Lleyn_icon"></li>
+			</ul>
+		</nav>
+
+		<div class="btn_scroll_down" href="box-video"></div>
+		<div class="btn_scroll_rl b_left" id = 'arrowL'></div>
+		<div class="btn_scroll_rl b_right" id = 'arrowR'></div>
+
+		<div class="footer_block-1">
+			60 наемников с неповторимой историей и сотни возможностей для построения команды ждут </br>
+			тебя! Система связей между персонажами - важная часть игрового сюжета и тонкий механизм </br>
+			настройки боевого отряда. Выбери свою фракцию и получай бонусы к мощи!
+		</div>
 	</article>
 
-	<div class="box-video">
+	<div class="box-video top_height">
 		<video class="block-2" autoplay loop>
 			<source src="img/3_VIDEO/bg.mp4" type="video/mp4">
 			<source src="img/3_VIDEO/bg.webm" type="video/webm">
 			Это видео не поддерживается вашим браузером
 		</video>
-		<div class="btn_scroll_down"></div>
+		<div class="btn_scroll_down" href="block-3"></div>
 	</div>	
 
-	<article class="block-3">
-		<div class="btn_scroll_down"></div>
+	<article class="block-3 top_height">
+		<div class="btn_scroll_down" href="foot"></div>
+		<img class="head_block-3" src="img/4_MOUNT/4_MOUNT_head.png"></img>
+		<section class="fight_rating_1">
+			<img src="img/4_MOUNT/4_MOUNT_rating_30000.png">
+			<p>1 уровень</p>
+
+		</section>
+		<section class="fight_rating_2">
+			<img src="img/4_MOUNT/4_MOUNT_rating_150000.png">
+			<p>50 уровень</p>
+		</section>
+		<div class="footer_block-3">
+			Пройди десятки элитных данжей, собери крепкие доспехи и сильнейшее оружие и приручи </br> 
+			верных маунтов. Добывай ценные ресурсы для максимальной прокачки снаряжения и отряда: </br>
+			развивай скиллы, применяй древние кодексы и собирай уникальные комбинации! </br>
+			Выработай свою стратегию боя и выбери ключевые умения для победы над врагами!
+		</div>
 	</article>
 
-	<footer>
+	<footer id="foot">
 		<img src="img/5_FOOTER/5_FOOTER_head.png" alt="девис" class="devis">
 		<div class="btn_play"></div>
+		<p class="share_page">Поделись страницей в социальной сети</p>
+		<div class="social_line">
+			<ul>
+				<li class="fb"></li>
+				<li class="vk"></li>
+				<li class="ok"></li>
+				<li class="mail"></li>
+			</ul>
+		</div>
+		<p class="copyright">
+			Нажимая кнопку "Играть", вы подтверждаете, что принимаете условия </br>
+			<ins>Пользовательского соглашения</ins> и <ins>Политики приватности</ins>.
+		</p>
+		<img class="logo_footer" src="img/5_FOOTER/5_FOOTER_logo_101xp.png"></img>
 	</footer>
+
+	<!-- Загрузка используемых на сайте изображений синхронная с загрузкой сайта для сохранения их в кэше -->
+	<img src="img/6_BUTTONS/BTN_play_normal.png" alt="play" class="hide_icon">
+	<img src="img/6_BUTTONS/BTN_play_hover.png" alt="play" class="hide_icon">
+	<img src="img/6_BUTTONS/BTN_play_active.png" alt="play" class="hide_icon">
+	<img src="img/2_CHARS/2_CHARS_icon_Isolda_inactive.png" alt="icon_Isolda" class="hide_icon">
+	<img src="img/2_CHARS/2_CHARS_icon_Isolda_hover.png" alt="icon_Isolda" class="hide_icon">
+	<img src="img/2_CHARS/2_CHARS_icon_Isolda_active.png" alt="icon_Isolda" class="hide_icon">
+	<img src="img/2_CHARS/2_CHARS_icon_Pamela_inactive.png" alt="icon_Pamela" class="hide_icon">
+	<img src="img/2_CHARS/2_CHARS_icon_Pamela_hover.png" alt="icon_Pamela" class="hide_icon">
+	<img src="img/2_CHARS/2_CHARS_icon_Pamela_active.png" alt="icon_Pamela" class="hide_icon">
+	<img src="img/2_CHARS/2_CHARS_icon_Lleyn_inactive.png" alt="icon_Lleyn" class="hide_icon">
+	<img src="img/2_CHARS/2_CHARS_icon_Lleyn_hover.png" alt="icon_Lleyn" class="hide_icon">
+	<img src="img/2_CHARS/2_CHARS_icon_Lleyn_active.png" alt="icon_Lleyn" class="hide_icon">
 
 	<script type="text/javascript" src="js/libs.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>

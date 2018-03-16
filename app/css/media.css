@@ -1,0 +1,4 @@
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  .left_block-1 {
+    left: 14%; } }
