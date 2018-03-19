@@ -20,13 +20,29 @@ $(function() {
 	// задает класс active иконки персонажа для стартового слайда 
 	$('.toggleChar li:first').addClass('active');
 
-	/*// обработчик при нажатии на иконку персонажа
+	for (var i = 0; i < btnChars.length; i++) {
+		btnChars[i].addEventListener('click', function() {
+			btnChars.indexOf = [].indexOf;
+			var indActive = document.getElementsByClassName('active')[0],
+			indInitIcon = btnChars.indexOf(indActive),
+			indClickIcon = btnChars.indexOf(this),
+			
+			initialPos = $('.slider').css('left').replace('px', '')*1,
+			posSlide = indClickIcon - indInitIcon,
+			currentWidth = $('.slider').css('width').replace('px', '')*1,
+			newPos = initialPos + currentWidth * (-posSlide);
+
+			$('.slider').animate({left: newPos}, timeDelay);
+		});
+	}
+
+		// обработчик при нажатии на иконку персонажа
 	for (var i = 0; i < btnChars.length; i++) {
 		btnChars[i].addEventListener('click', function() {
 			$('.toggleChar li').removeClass('active');
 			$(this).addClass("active");
 		});
-	}*/
+	}
 
 	// обработчик при нажатии на стрелку влево
 	$('#arrowL').bind({'click': moveLeft, 'mousedown': switchIconL});																			
